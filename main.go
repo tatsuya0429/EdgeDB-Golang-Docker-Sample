@@ -19,5 +19,8 @@ func main() {
 	e.POST("/signup", handlers.SignUp)
 	e.POST("/signin", handlers.SignIn)
 
+	e.GET("/todos", handlers.GetAllTodos)
+	e.POST("/todos", handlers.AddTodo)
+
 	e.Logger.Fatal(e.Start(":5000"))
 }

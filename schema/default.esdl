@@ -14,6 +14,6 @@ module default {
       default := 'Todo';
     }
     property deadline -> cal::local_date;
-    link user -> User;
+    required link user -> User;
   }
 }

@@ -5,10 +5,10 @@ import (
 )
 
 type Todo struct {
-	ID          edgedb.UUID
-	Title       string
-	Description string
-	Status      string
-	Deadline    edgedb.LocalDate
-	User        User
+	ID          edgedb.UUID              `edgedb:"id"`
+	Title       string                   `edgedb:"title"`
+	Description string                   `edgedb:"description"`
+	Status      edgedb.OptionalStr       `edgedb:"status"`
+	Deadline    edgedb.OptionalLocalDate `edgedb:"deadline"`
+	User        User                     `edgedb:"user"`
 }
